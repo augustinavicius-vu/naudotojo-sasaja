@@ -1,0 +1,32 @@
+/* --- Default Settings --- */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica;
+}
+
+/* --- Navigation Pane Style --- */
+/* General */
+.navigation {
+    background-color: #78003F;
+    display: flex;
+    align-items: center; /* Center Text & Child Logo*/
+    justify-content: space-between; /* Equal percentages of space between elements */
+    
+}
+/* Title (Including Logo) */
+.title {
+    font-size: 5rem; /* 10% Browser Window Height */
+    display: flex; /* Element Positioning Inside DIV */
+    align-items: center; /* Center Text & Child Logo*/
+}
+/* Specific Logo Style */
+.logo {
+    width: auto; /* Keep the same aspect ratio - prevents logo from transforming */
+    height: 5rem; /* 10% browser Window Height */
+}
+/* --- Main Content --- */
+/* --- Footer --- */
+footer {
+    background-color: #78003F;
+}
