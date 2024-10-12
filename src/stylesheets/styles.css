@@ -79,14 +79,17 @@ a {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* MOVIES */
 .movie-grid {
     padding-top: 5vh;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(15vw, 1fr));
 }
-
+.movie {
+    padding: 1vw;
+}
 .movie img {
-    width: 150px;
+    width: 15vw;
     /* Set a fixed width for the image */
     height: auto;
     /* Maintain the aspect ratio */
@@ -95,15 +98,18 @@ a {
     object-fit: cover;
     /* Ensures the image fills its box nicely */
 }
-
+.movie-text h4 {
+    font-size: 2vw;
+}
 .movie-text p {
-    font-size: 1vh;
+    font-size: 1vw;
 }
 
+
+/* FOOTER */
 footer {
     background-color: #122932;
 }
-
 .contact-grid {
     padding: 5vh;
     display: grid;
@@ -112,46 +118,42 @@ footer {
     color: #f9f9f9;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .contact-emails {
     display: flex;
     flex-direction: column;
 }
-
 .contact-emails a {
     margin-top: 1vh;
 }
-
 .contact-locations {
     display: flex;
     flex-direction: column;
 }
-
 .contact-locations a {
     margin-top: 1vh;
 }
 
-/* Responsive design: For smaller screens */
+/* MEDIA RESPONSIVENESS */
 @media (max-width: 768px) {
+    /* BODY TOP */
     body {
-        padding-top: 15vh;
+        padding-top: 18vh;
     }
 
+    /* NAVIGATION */
     #nav {
         flex-direction: column;
         /* Stack the header and links vertically */
         align-items: center;
         /* Center them */
     }
-
     #nav h1 {
         margin-bottom: 10px;
         /* Add some space below the header */
         text-align: center;
         /* Center the header text */
     }
-
-    .nav-links {
+    #nav-links {
         flex-direction: column;
         /* Stack the links vertically */
         width: 100%;
@@ -159,8 +161,7 @@ footer {
         align-items: center;
         /* Center the links */
     }
-
-    .nav-links a {
+    #nav-links a {
         margin: 5px 0;
         /* Spacing between links */
         width: 80%;
@@ -169,6 +170,7 @@ footer {
         /* Center text inside the link */
     }
 
+    /* NEWS */
     .news-item {
         flex-direction: column;
         /* Stack image and text vertically */
@@ -177,7 +179,6 @@ footer {
         text-align: center;
         /* Center-align the text */
     }
-
     .news-item img {
         width: 100%;
         /* Make the image responsive */
@@ -186,9 +187,32 @@ footer {
         margin-bottom: 15px;
         /* Space between the image and the text */
     }
-
     .news-item-text {
         text-align: center;
         /* Center text for small screens */
+    }
+
+    /* MOVIES */
+    .movie-grid {
+        grid-template-columns: auto auto;
+    }
+    .movie {
+        padding: 1vw;
+    }
+    .movie img {
+        width: 100%;
+        /* Set a fixed width for the image */
+        height: auto;
+        /* Maintain the aspect ratio */
+        border-radius: 5px;
+        /* Optional: rounded corners for the image */
+        object-fit: cover;
+        /* Ensures the image fills its box nicely */
+    }
+    .movie-text h4 {
+        font-size: 3vh;
+    }
+    .movie-text p {
+        font-size: 2vh;
     }
 }
