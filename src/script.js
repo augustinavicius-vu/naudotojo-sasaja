@@ -19,7 +19,7 @@ function performOperation(op) {
     } else if (op === '!') {
         displayValue = factorial(parseInt(displayValue)).toString();
     } else if (op === 'log') {
-        displayValue = Math.log10(parseFloat(displayValue)).toString();
+        displayValue = Math.log2(parseFloat(displayValue)).toString();
     } else {
         firstOperand = parseFloat(displayValue);
         displayValue = '';
