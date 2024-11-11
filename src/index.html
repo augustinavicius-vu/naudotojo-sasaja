@@ -1,36 +1,50 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="stylesheet.css">
-    <script src="scripts.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <input type="text">
+    <div class="calculator">
+        <input type="text" id="display" disabled />
+        <div class="buttons">
+            <!-- Calculator buttons here -->
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button onclick="performOperation('÷')">÷</button>
 
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>4</button>
-    <button>5</button>
-    <button>6</button>
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
-    <button>0</button>
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button onclick="performOperation('×')">×</button>
 
-    <button>+</button>
-    <button>-</button>
-    <button>÷</button>
-    <button>×</button>
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button onclick="performOperation('-')">-</button>
 
-    <button>x<sup>2</sup></button>
-    <button>x<sup>y</sup></button>
+            <button onclick="appendNumber('0')">0</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="deleteLast()">DEL</button>
+            <button onclick="performOperation('+')">+</button>
 
-    <button>
-        <span style="white-space: nowrap">
-            &radic;<span style="text-decoration:overline;">&nbsp;x&nbsp;</span>
-        </span>
-    </button>
+            <!-- Advanced operations -->
+            <button onclick="calculate()">=</button>
+            <button onclick="performOperation('√')">√</button>
+            <button onclick="performOperation('^')">xʸ</button>
+            <button onclick="performOperation('!')">!</button>
+            <button onclick="performOperation('log')">log</button>
+        </div>
 
+        <!-- Instructional paragraph below buttons -->
+        <p class="instructions">
+            Keyboard Shortcuts: Use numbers and operators (+, -, *, /, ^). Press 'Enter' or '=' for results, 'Backspace' to delete, 'C' to clear, '!' for factorial, 'L' for log, and 'R' for square root.
+        </p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+</html>
