@@ -81,7 +81,6 @@ function handleKeyboardInput(event) {
     const key = event.key;
 
     if (key >= '0' && key <= '9') {
-        // If a number key is pressed, append the number
         appendNumber(key);
     } else if (key === '+') {
         performOperation('+');
@@ -94,22 +93,16 @@ function handleKeyboardInput(event) {
     } else if (key === '^') {
         performOperation('^');
     } else if (key === 'Enter' || key === '=') {
-        // Enter or '=' to calculate
         calculate();
     } else if (key === 'Backspace') {
-        // Backspace to delete last character
         deleteLast();
     } else if (key === 'c' || key === 'C') {
-        // 'C' to clear the display
         clearDisplay();
     } else if (key === '!') {
-        // '!' to calculate factorial
         performOperation('!');
     } else if (key.toLowerCase() === 'l') {
-        // 'L' to calculate logarithm (log10)
         performOperation('log');
     } else if (key === 'r') {
-        // 'R' for square root
         performOperation('√');
     }
 }
